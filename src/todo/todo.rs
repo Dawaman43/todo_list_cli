@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
-
-#[derive(Deserialize, Serialize, Debug)]
+use tabled::Tabled;
+#[derive(Deserialize, Serialize, Tabled, Debug)]
 pub struct Todo {
-    id: i32,
-    text: String,
-    completed: bool,
+    pub id: i32,
+    pub text: String,
+    pub completed: bool,
 }
